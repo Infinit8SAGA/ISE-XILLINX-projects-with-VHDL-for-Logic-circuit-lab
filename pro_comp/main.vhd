@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    19:44:25 05/08/2025 
+-- Design Name: 
+-- Module Name:    main - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+entity main is																	-- ?? ????? 4 ???? ???? ????? ???? ?????? 
+	port (																		--EQ ???? ???? ????? ????? ????? 1 ?????		
+		A, B : in STD_LOGIC_VECTOR(3 downto 0);                  -- GT ???? ? ???? ?? ?? ?? ???? 1 ?????
+		EQ, GT, LT : out STD_LOGIC                               --LT ???? ? ???? ?? ?? ?? ???? 1 ?????
+	);
+
+end main;
+
+architecture Behavioral of main is
+
+begin
+	EQ <= '1' when A = B else '0';
+	GT <= '1' when A > B else '0';
+	LT <= '1' when A < B else '0';
+end Behavioral;
+
